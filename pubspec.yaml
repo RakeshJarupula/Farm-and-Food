@@ -1,0 +1,65 @@
+name: farm_and_food
+
+description: "This Project uses Gemini API to analyze the healthiness of food and the plant disease."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+# Dependencies 
+dependencies:
+  flutter:
+    sdk: flutter
+
+  image_picker: ^1.1.2
+  cupertino_icons: ^1.0.6
+  lottie: ^3.1.2
+  google_generative_ai: ^0.4.3
+  flutter_markdown: ^0.7.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+
+
+# Flutter
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/Backgrounds/
+    - assets/Icons/
+    - assets/RiveAssets/
+
+  fonts:
+    - family: Intel
+      fonts:
+        - asset: assets/Fonts/Intel-Regular.ttf
+        - asset: assets/Fonts/Intel-SemiBold.ttf
+          weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 700
+
+  
+# App Icon
+flutter_launcher_icons:
+  android: 'launcher_icon'
+  ios: 'AppIcon'
+  image_path: 'assets/Icons/logo.png'
+  background_color: '#ffffff'
+  min_sdk_android: 21
+
+flutter_icons:
+  image_path: "assets/Icons/icon.png"
+  android: true
+  ios: true
+  adaptive_icon_foreground: "assets/icon/Icons.png"
+  adaptive_icon_background: "#ffffff"

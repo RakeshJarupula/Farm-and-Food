@@ -1,0 +1,111 @@
+import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:farm_and_food/screens/food.dart';
+import 'package:farm_and_food/screens/farm.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double minSize = 150;
+    double lottieSize = screenWidth * 0.13 < minSize ? minSize : screenWidth * 0.13;
+    double circleSize = screenWidth * 0.15 < minSize ? minSize : screenWidth * 0.15;
+
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            bottom: 1,
+            child: Lottie.asset('assets/Backgrounds/back_anim.json'),
+          ),
+          Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
+              child: const SizedBox(),
+            ),
+          ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Farm & Food Insights💡',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'Poppins',
+                      height: 1.2,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Analyze Crop and Food using Gemini.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Intel-SemiBold',
+                    ),
+                  ),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FoodPage()),
+                      );
+                    },
+                    child: Center(
+                      child: Container(
+                        width: circleSize,
+                        height: circleSize,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.8),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Lottie.asset('assets/Backgrounds/food_home.json', width: lottieSize, height: lottieSize),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FarmPage()),
+                      );
+                    },
+                    child: Center(
+                      child: Container(
+                        width: circleSize,
+                        height: circleSize,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.8),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Lottie.asset('assets/Backgrounds/farm_home.json', width: lottieSize, height: lottieSize),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Spacer(),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
