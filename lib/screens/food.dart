@@ -1,8 +1,10 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:lottie/lottie.dart';
+import 'package:farm_and_food/utils/tips.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lottie/lottie.dart';
 import 'package:farm_and_food/utils/display_md.dart';
 import 'package:farm_and_food/api/gemini_service.dart';
 import 'package:farm_and_food/constants/promts.dart';
@@ -18,6 +20,20 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   File? _image;
   bool _isLoading = false;
+  String _tip = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchTip();
+  }
+
+  Future<void> _fetchTip() async {
+    final tip = await getHealthTip();
+    setState(() {
+      _tip = tip!;
+    });
+  }
 
   void _pickImage(ImageSource source) async {
     final pickedFile = await ImagePicker().pickImage(source: source);
@@ -76,47 +92,71 @@ class _FoodPageState extends State<FoodPage> {
               child: const SizedBox(),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (_image != null)
-                  Image.file(
-                    _image!,
-                    width: 250,
-                    height: 250,
-                  )
-                else
-                  const Text(
-                    'Select A Food Image To Explore It.',
-                    style: TextStyle(
-                      fontFamily: 'Intel-SemiBold',
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600
+          Column(
+            children: [
+              const SizedBox(height: 20),
+              ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+                child: Container(
+                  color: Color.fromARGB(255, 33, 98, 116),
+                  width: MediaQuery.of(context).size.width*0.7,
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    _tip,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () => _pickImage(ImageSource.camera),
-                      child: const Text('📷 Camera', style: TextStyle(fontWeight: FontWeight.w700)),
-                    ),
-                    const SizedBox(width: 30),
-                    ElevatedButton(
-                      onPressed: () => _pickImage(ImageSource.gallery),
-                      child: const Text('💿 Gallery', style: TextStyle(fontWeight: FontWeight.w700)),
-                    ),
-                  ],
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _sendImageToApi,
-                  child: const Text('🔍 Analyze', style: TextStyle(fontWeight: FontWeight.w900)),
+              ),
+              Expanded(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (_image != null)
+                        Image.file(
+                          _image!,
+                          width: 250,
+                          height: 250,
+                        )
+                      else
+                        const Text(
+                          'Select A Food Image To Explore It.',
+                          style: TextStyle(
+                            fontFamily: 'Intel-SemiBold',
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () => _pickImage(ImageSource.camera),
+                            child: const Text('📷 Camera', style: TextStyle(fontWeight: FontWeight.w700)),
+                          ),
+                          const SizedBox(width: 30),
+                          ElevatedButton(
+                            onPressed: () => _pickImage(ImageSource.gallery),
+                            child: const Text('💿 Gallery', style: TextStyle(fontWeight: FontWeight.w700)),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: _sendImageToApi,
+                        child: const Text('🔍 Analyze', style: TextStyle(fontWeight: FontWeight.w900)),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           if (_isLoading)
             Positioned(
@@ -133,3 +173,6 @@ class _FoodPageState extends State<FoodPage> {
     );
   }
 }
+
+
+
