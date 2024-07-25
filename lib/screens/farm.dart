@@ -1,11 +1,12 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:lottie/lottie.dart';
+import 'package:farm_and_food/utils/tips.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lottie/lottie.dart';
 import 'package:farm_and_food/utils/display_md.dart';
-import 'package:farm_and_food/constants/promts.dart';
 import 'package:farm_and_food/api/gemini_service.dart';
+import 'package:farm_and_food/constants/promts.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class FarmPage extends StatefulWidget {
@@ -18,6 +19,20 @@ class FarmPage extends StatefulWidget {
 class _FarmPageState extends State<FarmPage> {
   File? _image;
   bool _isLoading = false;
+  String _tip = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchTip();
+  }
+
+  Future<void> _fetchTip() async {
+    final tip = await getFarmTip();
+    setState(() {
+      _tip = tip!;
+    });
+  }
 
   void _pickImage(ImageSource source) async {
     final pickedFile = await ImagePicker().pickImage(source: source);
@@ -54,11 +69,10 @@ class _FarmPageState extends State<FarmPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Analyze Crop',
+          'Analyze Farm',
           style: TextStyle(
             color: Color.fromARGB(255, 11, 1, 5),
             fontSize: 20,
@@ -77,47 +91,71 @@ class _FarmPageState extends State<FarmPage> {
               child: const SizedBox(),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (_image != null)
-                  Image.file(
-                    _image!,
-                    width: 250,
-                    height: 250,
-                  )
-                else
-                  const Text(
-                    'Select A Crop Image To Explore It.',
-                    style: TextStyle(
-                      fontFamily: 'Intel-SemiBold',
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600
+          Column(
+            children: [
+              const SizedBox(height: 20),
+              ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+                child: Container(
+                  color: Colors.greenAccent,
+                  width: MediaQuery.of(context).size.width*0.9,
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    _tip,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () => _pickImage(ImageSource.camera),
-                      child: const Text('📷 Camera', style: TextStyle(fontWeight: FontWeight.w700)),
-                    ),
-                    const SizedBox(width: 30),
-                    ElevatedButton(
-                      onPressed: () => _pickImage(ImageSource.gallery),
-                      child: const Text('💿 Gallery', style: TextStyle(fontWeight: FontWeight.w700)),
-                    ),
-                  ],
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _sendImageToApi,
-                  child: const Text('🔍 Analyze', style: TextStyle(fontWeight: FontWeight.w900)),
+              ),
+              Expanded(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (_image != null)
+                        Image.file(
+                          _image!,
+                          width: 250,
+                          height: 250,
+                        )
+                      else
+                        const Text(
+                          'Select A Farm Image To Explore It.',
+                          style: TextStyle(
+                            fontFamily: 'Intel-SemiBold',
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () => _pickImage(ImageSource.camera),
+                            child: const Text('📷 Camera', style: TextStyle(fontWeight: FontWeight.w700)),
+                          ),
+                          const SizedBox(width: 30),
+                          ElevatedButton(
+                            onPressed: () => _pickImage(ImageSource.gallery),
+                            child: const Text('💿 Gallery', style: TextStyle(fontWeight: FontWeight.w700)),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: _sendImageToApi,
+                        child: const Text('🔍 Analyze', style: TextStyle(fontWeight: FontWeight.w900)),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           if (_isLoading)
             Positioned(
@@ -126,7 +164,7 @@ class _FarmPageState extends State<FarmPage> {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.width * 0.2,
-                child: Lottie.asset('assets/Backgrounds/farm_loader.json'),
+                child: Lottie.asset('assets/Backgrounds/food_loader.json'),
               ),
             ),
         ],
