@@ -98,8 +98,8 @@ class _FoodPageState extends State<FoodPage> {
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Container(
-                  color: Color.fromARGB(255, 33, 98, 116),
-                  width: MediaQuery.of(context).size.width*0.7,
+                  color: const Color.fromARGB(255, 33, 98, 116),
+                  width: MediaQuery.of(context).size.width*0.9,
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     _tip,

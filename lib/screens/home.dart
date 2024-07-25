@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Analyze Crop and Food using Gemini.',
+                    'Analyze Plant Disease and Food Hygiene Using Gemini.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Intel-SemiBold',

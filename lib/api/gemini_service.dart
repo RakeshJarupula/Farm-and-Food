@@ -1,4 +1,4 @@
-import 'package:farm_and_food/constants/gemini_api.dart';
+import 'package:farm_and_food/constants/gemini_api_key.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 final GenerativeModel geminiModel = GenerativeModel(
