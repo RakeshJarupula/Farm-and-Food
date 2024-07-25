@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:farm_and_food/screens/food.dart';
 import 'package:farm_and_food/screens/farm.dart';
+import 'package:particles_fly/particles_fly.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,6 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     double minSize = 150;
     double lottieSize = screenWidth * 0.13 < minSize ? minSize : screenWidth * 0.13;
@@ -28,10 +30,27 @@ class _HomePageState extends State<HomePage> {
           ),
           Positioned.fill(
             child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
+              filter: ImageFilter.blur(sigmaX: 95, sigmaY: 95),
               child: const SizedBox(),
             ),
           ),
+          ParticlesFly(
+            height: screenHeight,
+            width: screenWidth,
+            lineStrokeWidth: 0.1,
+            connectDots: true,
+            numberOfParticles: 50,
+            awayRadius: 100,
+            speedOfParticles: 1,
+            isRandomColor: true,
+            maxParticleSize: 7,
+            awayAnimationCurve: Curves.bounceOut,
+            awayAnimationDuration: const Duration(milliseconds: 10),
+            isRandSize: true,
+            enableHover: true,
+            hoverRadius: 30,
+            lineColor: const Color.fromARGB(90, 149, 148, 149),
+            ),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),

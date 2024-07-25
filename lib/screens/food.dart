@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:farm_and_food/utils/display_mk.dart';
+import 'package:farm_and_food/utils/display_md.dart';
 import 'package:farm_and_food/api/gemini_service.dart';
 import 'package:farm_and_food/constants/promts.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';

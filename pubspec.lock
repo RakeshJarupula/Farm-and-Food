@@ -376,6 +376,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  particles_fly:
+    dependency: "direct main"
+    description:
+      name: particles_fly
+      sha256: "6638eee64aa474727b98139ff9fb85633fbd8fa573c20972aac076f8cd145778"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.9"
   path:
     dependency: transitive
     description:

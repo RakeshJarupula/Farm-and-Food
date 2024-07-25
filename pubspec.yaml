@@ -19,6 +19,7 @@ dependencies:
   lottie: ^3.1.2
   google_generative_ai: ^0.4.3
   flutter_markdown: ^0.7.3
+  particles_fly: ^0.0.9
 
 dev_dependencies:
   flutter_test:
