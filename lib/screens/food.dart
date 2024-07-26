@@ -2,7 +2,6 @@ import 'dart:io';
 import 'dart:ui';
 import 'package:farm_and_food/utils/tips.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 import 'package:farm_and_food/utils/display_md.dart';
@@ -72,8 +71,9 @@ class _FoodPageState extends State<FoodPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
-          'Analyze Food',
+          'Analyze Food🍽️',
           style: TextStyle(
             color: Color.fromARGB(255, 11, 1, 5),
             fontSize: 20,
@@ -98,15 +98,14 @@ class _FoodPageState extends State<FoodPage> {
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Container(
-                  color: const Color.fromARGB(255, 33, 98, 116),
-                  width: MediaQuery.of(context).size.width*0.9,
+                  color: const Color.fromARGB(255, 25, 64, 48),
+                  width: MediaQuery.of(context).size.width*0.6,
                   padding: const EdgeInsets.all(16.0),
-                  child: Text(
+                  child: Text( 
                     _tip,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
                     ),
                     textAlign: TextAlign.center,
                   ),

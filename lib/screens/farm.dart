@@ -71,8 +71,9 @@ class _FarmPageState extends State<FarmPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
-          'Analyze Farm',
+          'Analyze Plant🪴',
           style: TextStyle(
             color: Color.fromARGB(255, 11, 1, 5),
             fontSize: 20,
@@ -97,15 +98,14 @@ class _FarmPageState extends State<FarmPage> {
               ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Container(
-                  color: Colors.greenAccent,
-                  width: MediaQuery.of(context).size.width*0.9,
+                  color: const Color.fromARGB(255, 25, 64, 48),
+                  width: MediaQuery.of(context).size.width*0.6,
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     _tip,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -164,7 +164,7 @@ class _FarmPageState extends State<FarmPage> {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.2,
                 height: MediaQuery.of(context).size.width * 0.2,
-                child: Lottie.asset('assets/Backgrounds/food_loader.json'),
+                child: Lottie.asset('assets/Backgrounds/farm_loader.json'),
               ),
             ),
         ],
