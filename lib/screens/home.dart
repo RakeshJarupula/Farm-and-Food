@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(height: 20),
                   const Text(
                     'Farm & Food Insights💡',
                     textAlign: TextAlign.center,
