@@ -1,6 +1,6 @@
 ![Intro](./assets/Images/intro.png)
 # Introduction 💡
-**Farm and Food** is a cutting-edge mobile application designed to empower users with insightful analysis of their food choices and their gardens/farms. Leveraging advanced and powerful **Gemini models**, Farm and Food offers a seamless way to understand the nutritional content, impact, overall quality of your meals and way to understand the crop/plant health and sustainable ways to improve it.
+**Farm and Food** is a cutting-edge mobile application designed to empower users with insightful analysis of their food choices and their gardens/farms. Leveraging advanced and powerful **Gemini models**, Farm and Food offers a seamless way to understand the nutritional content, impact, overall quality of your meals and ways to understand the crop/plant health and sustainable ways to improve it.
 
 **Key Functions:**
 
@@ -30,6 +30,10 @@ At the core it has 2 main functions:
 
 # Demo Video 📹
 [![Home](./assets/Images/home.gif)](https://rakeshjarupula.github.io/)
+
+# About 
+
+![Image](./assets/Images/about.png)
 
 # Install ⬇️
 Android: 
