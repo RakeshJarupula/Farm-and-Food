@@ -20,7 +20,5 @@ Future<String?> getFarmTip() async {
     return response.text;
   } catch (e) {
     return '';
-  }
-  
-  
+  }  
 }
