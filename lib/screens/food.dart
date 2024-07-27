@@ -11,7 +11,7 @@ class FoodPage extends BasePage {
 
 class _FoodPageState extends BasePageState<FoodPage> {
   @override
-  String get title => 'Analyze Food🍽️';
+  String get title => 'Analyze Food 😋';
 
   @override
   TextPart get prompt => FOOD_PROMPT;

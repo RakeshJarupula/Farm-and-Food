@@ -11,7 +11,7 @@ class FarmPage extends BasePage {
 
 class _FarmPageState extends BasePageState<FarmPage> {
   @override
-  String get title => 'Analyze Farm🪴';
+  String get title => 'Analyze Farm 🪴';
 
   @override
   TextPart get prompt => FARM_PROMPT;
