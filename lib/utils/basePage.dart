@@ -50,7 +50,7 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
 
       showResponseDialog(context, response.text);
     } catch (e) {
-      showResponseDialog(context, 'Please make sure you are connected to the internet!');
+      showResponseDialog(context, '${e}');
     }
 
     setState(() {
