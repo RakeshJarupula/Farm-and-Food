@@ -60,6 +60,8 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -83,6 +85,17 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
               child: const SizedBox(),
             ),
           ),
+          if (_image == null)
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: SizedBox(
+                width: screenWidth * 0.5,
+                height: screenWidth * 0.4, 
+                child: Lottie.asset('assets/Backgrounds/gemini.json'),
+              ),
+            ),
           Column(
             children: [
               Expanded(
@@ -97,12 +110,15 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                           height: 250,
                         )
                       else
-                         Text(
-                          task,
-                          style: const TextStyle(
-                            fontFamily: 'Intel-SemiBold',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
+                        Padding(
+                          padding: EdgeInsets.only(top: screenWidth * 0.7), // Adjust padding to leave space for the Lottie animation
+                          child: Text(
+                            task,
+                            style: const TextStyle(
+                              fontFamily: 'Intel-SemiBold',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       const SizedBox(height: 20),
@@ -129,8 +145,8 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                       const SizedBox(height: 20),
                       ElevatedButton(
                         style: const ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(255, 94, 11, 11)),
-                            ),
+                          backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(255, 94, 11, 11)),
+                        ),
                         onPressed: _sendImageToApi,
                         child: const Text('🔍 Analyze', style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white)),
                       ),

@@ -40,8 +40,4 @@ Android App:
  - Download APK file from [here](https://drive.google.com/file/d/11joDMVQW6A3pHra5xWUdt4kHjEO0KgJa/view?usp=sharing).
  - Run the APK file in mobile. 
 
-Windows Desktop App:
- - Download Zip file from [here](https://drive.google.com/file/d/1C05rKpNU91h97SA1LTCX9VxUAsspJSaK/view?usp=sharing)
- - Unzip it and double click: `farm_and_food.exe` file
-
 # In Action ⚙️
