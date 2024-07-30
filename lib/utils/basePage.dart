@@ -110,15 +110,12 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                           height: 250,
                         )
                       else
-                        Padding(
-                          padding: EdgeInsets.only(top: screenWidth * 0.7), // Adjust padding to leave space for the Lottie animation
-                          child: Text(
-                            task,
-                            style: const TextStyle(
-                              fontFamily: 'Intel-SemiBold',
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                            ),
+                        Text(
+                          task,
+                          style: const TextStyle(
+                            fontFamily: 'Intel-SemiBold',
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       const SizedBox(height: 20),
@@ -138,7 +135,7 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                               backgroundColor: WidgetStatePropertyAll<Color>(Color.fromARGB(255, 9, 90, 47)),
                             ),
                             onPressed: () => _pickImage(ImageSource.gallery),
-                            child: const Text('💿 Gallery', style: TextStyle(fontWeight: FontWeight.w700, color: Colors.white)),
+                            child: const Text('🖼️ Gallery', style: TextStyle(fontWeight: FontWeight.w700, color: Colors.white)),
                           ),
                         ],
                       ),
