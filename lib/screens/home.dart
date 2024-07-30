@@ -80,28 +80,6 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const FoodPage()),
-                      );
-                    },
-                    child: Center(
-                      child: Container(
-                        width: circleSize,
-                        height: circleSize,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.8),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Lottie.asset('assets/Backgrounds/food_home.json', width: lottieSize, height: lottieSize),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 50),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
                         MaterialPageRoute(builder: (context) => const FarmPage()),
                       );
                     },
@@ -115,6 +93,28 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Center(
                           child: Lottie.asset('assets/Backgrounds/farm_home.json', width: lottieSize, height: lottieSize),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 50),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FoodPage()),
+                      );
+                    },
+                    child: Center(
+                      child: Container(
+                        width: circleSize,
+                        height: circleSize,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.8),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Lottie.asset('assets/Backgrounds/food_home.json', width: lottieSize, height: lottieSize),
                         ),
                       ),
                     ),
