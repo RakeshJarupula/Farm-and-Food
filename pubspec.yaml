@@ -1,6 +1,6 @@
 name: farm_and_food
 
-description: "This Project uses Gemini API to analyze the healthiness of food and the plant disease."
+description: "This Project uses Gemini API to analyze the healthiness of food and the crop disease."
 
 publish_to: 'none' 
 

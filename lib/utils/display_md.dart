@@ -10,10 +10,17 @@ void showResponseDialog(BuildContext context, message) {
           borderRadius: BorderRadius.circular(16),
         ),
         backgroundColor: Colors.white.withOpacity(0.5),
-        content: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: _buildCardsFromMessage(message),
+        content: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height * 0.5,
+            maxWidth: MediaQuery.of(context).size.width * 0.5,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: _buildCardsFromMessage(message),
+            ),
           ),
         ),
         actions: [
