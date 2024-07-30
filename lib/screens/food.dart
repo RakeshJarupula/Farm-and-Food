@@ -1,5 +1,5 @@
 import 'package:farm_and_food/constants/promts.dart';
-import 'package:farm_and_food/utils/basePage.dart';
+import 'package:farm_and_food/utils/base_page.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class FoodPage extends BasePage {
