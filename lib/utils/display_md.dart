@@ -13,7 +13,7 @@ void showResponseDialog(BuildContext context, message) {
             ),
             backgroundColor: Colors.white.withOpacity(0.5),
             content: SizedBox(
-              width: constraints.maxWidth * 0.5,
+              width: constraints.maxWidth * 0.7,
               child: ConstrainedBox(
                 constraints: BoxConstraints(
                   maxHeight: constraints.maxHeight * 0.8,
