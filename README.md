@@ -8,7 +8,7 @@ At its core, the app focuses on two main functions:
     Food Hygiene Analysis
     Crop Health Analysis
 
-1. Food Hygiene 🍽️ Analysis: Your ultimate companion for making informed food choices.
+1. **Food Hygiene 🍽️ Analysis**: Your ultimate companion for making informed food choices.
 
     Make healthier choices by receiving recommendations from food menu lists.
 
@@ -18,7 +18,7 @@ At its core, the app focuses on two main functions:
 
 All this is possible with a snap of an image. The powerful Gemini Models analyze the food, ensuring healthy lives and promoting well-being for all ages. This feature helps combat malnutrition and food intolerance, addressing critical health issues faced globally.
 
-2. Crop Health 🪴 Analysis: Essential for maintaining and improving farm health.
+2. **Crop Health 🪴 Analysis**: Essential for maintaining and improving farm health.
 
     Take control of your farm by understanding various disease conditions and their causes.
 
@@ -34,15 +34,16 @@ Farm and Food aligns with the United Nations' Sustainable Development Goals (SDG
 
 <img src="assets/Images/sdg2.png" alt="drawing" width="40"/>
     
-    Achieve food security and promote sustainable agriculture.
-        - The app tackles global malnutrition by enabling users to make healthier food choices, thereby improving nutrition.
-        - By providing insights into crop health and sustainable farming practices, it promotes food security and sustainable agriculture.
+Achieve food security and promote sustainable agriculture.
+- The app tackles global malnutrition by enabling users to make healthier food choices, thereby improving nutrition.
+- By providing insights into crop health and sustainable farming practices, it promotes food security and sustainable agriculture.
     
 <img src="assets/Images/sdg3.png" alt="drawing" width="40"/>
 
-    Ensure healthy lives and promote well-being for all at all ages.
-        - The app’s focus on food hygiene and nutritional analysis ensures that users can make informed decisions that promote overall health and well-being.
-        - By addressing food intolerance and promoting balanced diets, it contributes to the prevention of diet-related health issues.
+Ensure healthy lives and promote well-being for all at all ages.
+    
+- The app’s focus on food hygiene and nutritional analysis ensures that users can make informed decisions that promote overall health and well-being.
+- By addressing food intolerance and promoting balanced diets, it contributes to the prevention of diet-related health issues.
 
 Socio-Economic and Geographical Impact:
 
