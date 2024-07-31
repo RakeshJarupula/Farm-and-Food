@@ -84,7 +84,7 @@ Android App:
 
 
 # In Action ⚒️
-![image](assets/Images/Tests/home.png)
+![image](assets/Images/Tests/home.gif)
 ![image](assets/Images/Tests/farm_analysis_fruit.png)
 ![image](assets/Images/Tests/farm_analysis_crop.png)
 ![image](assets/Images/Tests/farm_analysis_plant.png)
@@ -99,5 +99,4 @@ Android App:
 # About ⚙️ 
 
 ![Image](./assets/Images/about.png)
-
 
