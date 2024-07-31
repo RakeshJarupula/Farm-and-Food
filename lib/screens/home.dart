@@ -1,6 +1,8 @@
 import 'dart:ui';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:farm_and_food/screens/food.dart';
 import 'package:farm_and_food/screens/farm.dart';
 import 'package:particles_fly/particles_fly.dart';
@@ -13,6 +15,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Future<void> _launchUrl() async {
+  final Uri url = Uri.parse('https://rakeshjarupula.github.io/');
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -50,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             enableHover: true,
             hoverRadius: 30,
             lineColor: const Color.fromARGB(90, 149, 148, 149),
-            ),
+          ),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -120,6 +129,25 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          const TextSpan(
+                            text: 'Made with ❤️ by ',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          TextSpan(
+                            text: 'Rakesh Jarupula',
+                            style: const TextStyle(color: Colors.blue),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = _launchUrl,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
