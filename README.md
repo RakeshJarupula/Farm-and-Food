@@ -1,6 +1,6 @@
 ![Intro](./assets/Images/intro.png)
 # **Introduction** 🌍
-Farm and Food is a cutting-edge mobile application designed to empower users with insightful analysis of their food choices and their farms. Leveraging advanced and powerful Gemini models, Farm and Food offers a seamless way to understand the nutritional content, overall quality of meals while providing vital insights into crop health and sustainable agricultural practices.
+Farm and Food is a cutting-edge mobile application designed to empower users with insightful analysis of their food choices and their farms. Leveraging advanced and powerful Gemini models, Farm and Food offers a seamless way to understand the nutritional content of meals and can also provide vital insights into crop health and sustainable agricultural practices.
 
 Key Functions:
 
@@ -68,7 +68,7 @@ Farm and Food aligns with the United Nations' Sustainable Development Goals (SDG
 - Promoting sustainable agricultural practices helps smallholder farmers increase productivity and profitability, fostering economic growth in rural areas.
 
 **Geographical Impact**:
-- The app’s ability to analyze food and crop health is valuable across diverse geographical regions, from urban settings with mini-gardens to rural areas with extensive farmland.
+- The app’s ability to analyze crop health is valuable across diverse geographical regions, from urban settings with mini-gardens to rural areas with extensive farmland.
 - By providing tailored tips and recommendations, it helps users adapt to local agricultural conditions and challenges, supporting global efforts to enhance food security.
 
 Farm and Food is more than an app; it is a movement towards healthier living and sustainable farming. Join us in making informed choices for our planet.
