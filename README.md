@@ -78,13 +78,26 @@ Farm and Food is more than an app; it is a movement towards healthier living and
 
 # How to Use ⬇️
 Android App: 
- - Download APK file from [here](https://drive.google.com/file/d/1prWLfSYWOanH3GrbCTX_ePK9hZ0mG4Yn/view?usp=sharing).
+ - Download APK file from [here](https://drive.google.com/file/d/13nMA3mB9QIRP0lmb2M8Ax4JQj_LT445Y/view?usp=sharing).
  - Run the APK file in mobile. 
-
-# About ⚙️
-
-![Image](./assets/Images/about.png)
+ - Open the app and click on any of the circles to explore more. 
 
 
 # In Action ⚒️
+![image](assets/Images/Tests/home.png)
+![image](assets/Images/Tests/farm_analysis_fruit.png)
+![image](assets/Images/Tests/farm_analysis_crop.png)
+![image](assets/Images/Tests/farm_analysis_plant.png)
+
+![image](assets/Images/Tests/food_single.png)
+![image](assets/Images/Tests/food_many.png)
+![image](assets/Images/Tests/food_menu.png)
+
+
+
+
+# About ⚙️ 
+
+![Image](./assets/Images/about.png)
+
 
