@@ -16,9 +16,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<void> _launchUrl() async {
-  final Uri url = Uri.parse('https://rakeshjarupula.github.io/');
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
+    final Uri url = Uri.parse('https://rakeshjarupula.github.io/');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
     }
   }
 
@@ -97,11 +97,34 @@ class _HomePageState extends State<HomePage> {
                         width: circleSize,
                         height: circleSize,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.8),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.white.withOpacity(0.95),
+                              Colors.white.withOpacity(0.7),
+                            ],
+                          ),
                           shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.15),
+                              offset: const Offset(7, 7),
+                              blurRadius: 7,
+                            ),
+                            BoxShadow(
+                              color: Colors.white.withOpacity(0.6),
+                              offset: const Offset(-3, -3),
+                              blurRadius: 7,
+                            ),
+                          ],
                         ),
                         child: Center(
-                          child: Lottie.asset('assets/Backgrounds/farm_home.json', width: lottieSize, height: lottieSize),
+                          child: Lottie.asset(
+                            'assets/Backgrounds/farm_home.json',
+                            width: lottieSize,
+                            height: lottieSize,
+                          ),
                         ),
                       ),
                     ),
@@ -119,11 +142,34 @@ class _HomePageState extends State<HomePage> {
                         width: circleSize,
                         height: circleSize,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.8),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.white.withOpacity(0.95),
+                              Colors.white.withOpacity(0.7),
+                            ],
+                          ),
                           shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.15),
+                              offset: const Offset(7, 7),
+                              blurRadius: 7,
+                            ),
+                            BoxShadow(
+                              color: Colors.white.withOpacity(0.6),
+                              offset: const Offset(-3, -3),
+                              blurRadius: 7,
+                            ),
+                          ],
                         ),
                         child: Center(
-                          child: Lottie.asset('assets/Backgrounds/food_home.json', width: lottieSize, height: lottieSize),
+                          child: Lottie.asset(
+                            'assets/Backgrounds/food_home.json',
+                            width: lottieSize,
+                            height: lottieSize,
+                          ),
                         ),
                       ),
                     ),
