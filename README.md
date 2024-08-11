@@ -1,4 +1,5 @@
 ![Intro](./assets/Images/intro.png)
+
 # **Introduction** 🌍
 Farm and Food is a cutting-edge mobile application designed to empower users with insightful analysis of their food choices and their farms. Leveraging advanced and powerful Gemini models, Farm and Food offers a seamless way to understand the nutritional content of meals and can also provide vital insights into crop health and sustainable agricultural practices.
 
@@ -11,23 +12,65 @@ At its core, the app focuses on two main functions:
 
 1. **Food Hygiene 🍽️ Analysis**: Your ultimate companion for making informed food choices.
 
-    Make healthier choices by receiving recommendations from food menu lists.
+    - Make healthier choices by receiving recommendations from food menu lists.
 
-    Identify food items rich in vitamins, proteins, and nutrients.
+    - Identify food items rich in vitamins, proteins, and nutrients.
 
-    Assess the hygiene levels of food items and discover healthy alternatives if available.
+    - Assess the hygiene levels of food items and discover healthy alternatives if available.
 
-All this is possible with a snap of an image. The powerful Gemini Models analyze the food, ensuring healthy lives and promoting well-being for all ages. This feature helps combat malnutrition and food intolerance, addressing critical health issues faced globally.
+    <u>Issues with existing food apps:</u>
+
+    ❌ Exsting apps are ingredients detectors or recipe makers.
+
+    ❌ They don't advise people whether it's good for them or not.
+
+    ❌ Apps can't help people select healthy food from the menu. 
+
+    ❌ Apps can't help to pick one item among many with specific user needs. 
+
+    <u>Food Features of the app:</u>
+
+    ✅ App can detect Hygiene levels of the food.
+
+    ✅ App can advice who shouldn't consume the food. Also returns unhealthy ingredients in it. 
+
+    ✅ It also suggest healthy alternatives, with almost same level of satisfaction. 
+
+    ✅ App can make users pick healthy food from the menu.
+
+    ✅ App can help select vitamins/proteins/nutrients rich item from the stock.  
+
+    All this is possible with a snap of an image. The powerful Gemini Models analyze the food, ensuring healthy lives and promoting well-being for all ages. This feature helps combat malnutrition and food intolerance, addressing critical health issues faced globally.
 
 2. **Crop Health 🪴 Analysis**: Essential for maintaining and improving farm health.
 
-    Take control of your farm by understanding various disease conditions and their causes.
+      - Take control of your farm by understanding various disease conditions and their causes.
 
-    Receive sustainable recommendations for curing diseases and promoting sustainable agriculture, along with preventive measures.
+      - Receive sustainable recommendations for curing diseases and promoting sustainable agriculture, along with preventive measures.
 
-    Get tips for maintaining healthy crops, thereby enhancing food security.
+      - Get tips for maintaining healthy crops, thereby enhancing food security.
 
-This feature supports green agriculture and can also be applied to gardens and mini-vegetable farms on terraces.
+      <u>Issues with existing Farm apps:</u>
+
+      ❌ Most app are Deep Learning based and work with single crop/disease/pest types.
+
+      ❌ Control methods suggested by them are based on agro-chemicals.
+
+      ❌ Apps can't adapt to different geographical regions. Making them region specific solutions.
+
+      ❌ Suggested methods pollute environment.
+
+      <u>Farm Features of the app:</u>
+
+      ✅ This app works for ALL crops/disease/pests. 
+
+      ✅ App suggests sustainable control methods.
+
+      ✅ With Gemini Models at core, It can be used around the world.
+
+      ✅ It promotes sustainable agriculture. 
+
+      This feature supports green agriculture and can also be applied to gardens and mini-vegetable farms on terraces.
 
 <p align="center">
   <img src="assets/Images/sdg.png" alt="drawing" width="100" />
@@ -40,7 +83,7 @@ This feature supports green agriculture and can also be applied to gardens and m
 Farm and Food aligns with the United Nations' Sustainable Development Goals (SDGs), particularly SDG 2 and SDG 3:
 
 <p align="center">
-  <img src="assets/Images/sdg2.png" alt="drawing" width="60" />
+  <img src="assets/Images/sdg2.png" alt="drawing" width="80" />
 </p>
     
 
@@ -52,7 +95,7 @@ Farm and Food aligns with the United Nations' Sustainable Development Goals (SDG
 - By providing insights into crop health and sustainable farming practices, it promotes food security and sustainable agriculture.
     
 <p align="center">
-  <img src="assets/Images/sdg3.png" alt="drawing" width="60" />
+  <img src="assets/Images/sdg3.png" alt="drawing" width="80" />
 </p>
 
 <p align="center">
@@ -73,21 +116,22 @@ Farm and Food aligns with the United Nations' Sustainable Development Goals (SDG
 
 Farm and Food is more than an app; it is a movement towards healthier living and sustainable farming. Join us in making informed choices for our planet.
 
-# Demo Video 📹
-[![Home](./assets/Images/home.gif)](https://rakeshjarupula.github.io/)
+# Demo Video 👇
+
+[![YouTube Video](https://img.youtube.com/vi/CJeNNTEdKt8/0.jpg)](https://www.youtube.com/watch?v=CJeNNTEdKt8)
 
 # How to Use ⬇️
 Android App: 
  - Download APK file from [here](https://drive.google.com/file/d/13nMA3mB9QIRP0lmb2M8Ax4JQj_LT445Y/view?usp=sharing).
  - Run the APK file in mobile. 
- - Open the app and click on any of the circles to explore more. 
+ - Open the app and click on any of the icons to explore more. 
 
 
 # In Action ⚒️
 ![image](assets/Images/Tests/home.gif)
-![image](assets/Images/Tests/farm_analysis_fruit.png)
-![image](assets/Images/Tests/farm_analysis_crop.png)
-![image](assets/Images/Tests/farm_analysis_plant.png)
+![image](assets/Images/Tests/farm_unhealthy_1.png)
+![image](assets/Images/Tests/farm_unhealthy_2.png)
+![image](assets/Images/Tests/farm_healthy_1.png)
 
 ![image](assets/Images/Tests/food_single.png)
 ![image](assets/Images/Tests/food_many.png)

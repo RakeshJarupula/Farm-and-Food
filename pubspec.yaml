@@ -37,7 +37,6 @@ flutter:
   assets:
     - assets/Backgrounds/
     - assets/Icons/
-    - assets/RiveAssets/
 
   fonts:
     - family: Intel
@@ -59,15 +58,3 @@ flutter_launcher_icons:
   background_color: '#ffffff'
   min_sdk_android: 21
   remove_alpha_ios: true
-  # web:
-  #   generate: true
-  #   image_path: "assets/Icons/logo.png"
-  #   background_color: "#hexcode"
-  #   theme_color: "#hexcode"
-  # windows:
-  #   generate: true
-  #   image_path: "assets/Icons/logo.png"
-  #   icon_size: 48
-  # macos:
-  #   generate: true
-  #   image_path: "assets/Icons/logo.png"
