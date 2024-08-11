@@ -62,11 +62,11 @@ At its core, the app focuses on two main functions:
 
       <u>Farm Features of the app:</u>
 
-      ✅ This app works for ALL crops/disease/pests. 
+      ✅ With Gemini Models at core, This app works for ALL crops/disease/pests. 
 
       ✅ App suggests sustainable control methods.
 
-      ✅ With Gemini Models at core, It can be used around the world.
+      ✅ Get Tips for healthy plants.
 
       ✅ It promotes sustainable agriculture. 
 
