@@ -122,7 +122,7 @@ Farm and Food is more than an app; it is a movement towards healthier living and
 
 # How to Use ⬇️
 Android App: 
- - Download APK file from [here](https://drive.google.com/file/d/1Zv3CERSWujZtxx7ghjydE2s9Y-0XT6eo/view?usp=sharing).
+ - Download APK file from [here](https://drive.google.com/file/d/1rpn1CdYS41e4jWvYaLjSZaCwNOUwCfrW/view?usp=sharing).
  - Run the APK file in mobile. 
  - Open the app and click on any of the icons to explore more. 
 
